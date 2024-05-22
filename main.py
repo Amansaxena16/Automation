@@ -1,5 +1,5 @@
 from reading import read_heading
-from gptAPI import Search
+from GeminiAPI import Search
 import re
 
 
