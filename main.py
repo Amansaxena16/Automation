@@ -3,10 +3,7 @@ from gptAPI import Search
 import re
 
 
-para = '''Wrong thinking is the only problem in life Based on above part of bhavat gita create a real-life problem related to "Career and Work Problems" on 'Communication issues' which is answered from above but make sure my Solution has the below properties: (Part 1: Write the solution to the problem which is positive and boost morale) (Part 2: Solution based on the gist of the Bhagwat Gita quotes) (Part 3: Please share the Verse along with simple English Translation also from Bhagwat Geeta from which this data is pulled in below format. -Verse : -Meaning in English) 
-
-only give the verse on this para
-'''
+para = '''Wrong thinking is the only problem in life Based on above part of bhavat gita create a real-life problem related to "Career and Work Problems" on 'Communication issues' which is answered from above but make sure my Solution has the below properties: (Part 1: Write the solution to the problem which is positive and boost morale) (Part 2: Solution based on the gist of the Bhagwat Gita quotes) (Part 3: Please share the Verse along with simple English Translation also from Bhagwat Geeta from which this data is pulled in below format. -Verse : -Meaning in English)'''
 
 sub_heading = read_heading()
 
