@@ -1,7 +1,8 @@
 import os
 import google.generativeai as genai
+from excel import insertIntoExcel
 
-genai.configure(api_key="Chachu Paste Your Key Here!!")
+genai.configure(api_key="PASTE YOUR API")
 
 generation_config = {
   "temperature": 0.9,
@@ -43,19 +44,42 @@ chat_session = model.start_chat(
 def Search(para):
   input = para
 
-  message = f"behave like a expert in bhagavad gita {input}"
-  response = chat_session.send_message(message)
+  message = f'''behave like a expert in bhagavad gita {input}
+  For Example : 
+  Question:
+  A family is experiencing communication issues, leading to misunderstandings and conflicts. Members feel unheard and frustrated, which strains their relationships.
 
-  with open('Data.txt', "a",encoding='utf-8') as file:
-      file.write("Problem:- ")
-      file.write("\n")
-      file.write(input)
-      file.write("\n\n")
-      file.write("Solution:- ")
-      file.write("\n")
-      file.write(response.text)
-      file.write("\n\n\n\n**************************************************************************************\n\n\n\n")
-      
-  print('done')
+  Answer:
+  In moments of discord, it is vital to remember the importance of calm and clear communication. Embrace the idea that every individual has their own perspective and feelings. By practicing empathy, patience, and openness, you can bridge the gaps in understanding and strengthen your familial bonds. Approach each conversation with the intention of mutual respect and love.
+
+  Based on Bhagavad Gita Quotes:
+
+  "Perform all your actions with your mind concentrated on the Divine, renouncing attachment and looking upon success and failure with an equal eye. Spirituality means equanimity." - Bhagavad Gita 2.48
+
+  "One who is not disturbed by the incessant flow of desires—that enter like rivers into the ocean, which is ever being filled but is always still—can alone achieve peace, and not the person who strives to satisfy such desires." - Bhagavad Gita 2.70
+
   
-# Search()
+  -Verse:  Bhagavad Gita, Chapter 2, Verse 47
+  "karmany evadhikaras te ma phalesu kadachana
+  ma karma-phala-hetur bhur ma te sango 'stv akarmani"
+
+  -Meaning in English:
+
+  One who performs duties without attachment, surrendering the results unto the Supreme Lord, is unaffected by sinful action, as the lotus leaf is untouched by water.
+  '''
+  
+  # input_list = []
+  # input_list.append(message)
+  
+  # for question in input_list:
+  #   response = chat_session.send_message(message)
+    
+  
+  # output_list = []
+  # output_list.append(response.text)
+  
+  # insertIntoExcel(message,response.text)
+  
+  
+
+
